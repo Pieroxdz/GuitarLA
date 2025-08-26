@@ -1,0 +1,53 @@
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 0;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.header-logo {
+    width: 30rem;
+}
+
+.nav-menu {
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        margin-top: 0;
+    }
+}
+
+.nav-menu a {
+    /* Para que se respete los margins de otros elementos */
+    display: inline-block;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 700;
+    /* Para el hover */
+    padding: .5rem;
+    font-size: 1.4rem;
+    transition: background-color .3s;
+}
+
+.nav-menu a:hover {
+    background-color: var(--primary);
+}
